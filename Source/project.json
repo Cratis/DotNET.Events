@@ -1,0 +1,21 @@
+{
+    "version": "1.0.0-*",
+    "description": "Provides abstractions for discovering and working with types",
+    "authors": [
+        "Einar Ingebrigtsen <einar@dolittle.com>"
+    ],
+    "buildOptions": {
+        "outputName": "Cratis.Types"
+    },
+    "tooling": {
+        "defaultNamespace": "Cratis.Types"
+    },
+    "dependencies": {
+        "System.ComponentModel": "4.3.0",
+        "System.Threading.Tasks.Parallel": "4.3.0",
+        "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0"
+    },
+    "frameworks": {
+        "netstandard1.6": {}
+    }
+}

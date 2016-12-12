@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using Cratis.Events;
-using Cratis.Events.Specs.for_EventStream.behaviors;
 using Machine.Specifications;
 
 namespace Cratis.Events.Specs.for_EventStream
@@ -27,9 +25,7 @@ namespace Cratis.Events.Specs.for_EventStream
                                      }
 
                                  };
-#pragma warning disable 0169
-        Behaves_like<an_event_stream_with_five_events_appended> an_event_stream;
-#pragma warning restore 0169        
-
+        It should_have_events = () => EventStream.HasEvents.ShouldBeTrue();
+        It should_have_an_event_count_of_5 = () => EventStream.Count.ShouldEqual(5);
     }
 }

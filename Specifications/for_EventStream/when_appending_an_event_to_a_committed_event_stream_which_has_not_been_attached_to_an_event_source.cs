@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Cratis.Events;
 using Machine.Specifications;
 
 namespace Cratis.Events.Specs.for_EventStream

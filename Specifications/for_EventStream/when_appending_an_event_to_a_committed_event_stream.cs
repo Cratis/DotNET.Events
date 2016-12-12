@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using Cratis.Events;
-using Cratis.Events.Specs.behaviors;
 using Machine.Specifications;
 
 namespace Cratis.Events.Specs.for_EventStream
@@ -17,9 +15,8 @@ namespace Cratis.Events.Specs.for_EventStream
 
         Because of = () => EventStream.Append(new List<IEvent>() { Event });
 
-#pragma warning disable 0169
-        Behaves_like<an_event_stream_with_one_event_appended> an_event_stream;
-#pragma warning restore 0169        
+        It should_have_events = () => EventStream.HasEvents.ShouldBeTrue();
+        It should_have_an_event_count_of_1 = () => EventStream.Count.ShouldEqual(1);
 
     }
 }
